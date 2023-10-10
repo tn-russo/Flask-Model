@@ -7,5 +7,9 @@ app = Flask(__name__, static_url_path='/static')
 def home():
     return "Teste FlaskPython"
 
+@app.route('/testroute')
+def second_route():
+    return "Teste 2 com rota"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
